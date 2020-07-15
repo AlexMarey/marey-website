@@ -1,0 +1,28 @@
+{
+  "name": "MareySite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^9.4.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "gray-matter": "^4.0.2",
+    "remark-highlight.js": "^6.0.0",
+    "remark-html": "^11.0.2",
+    "remark-parse": "^8.0.2",
+    "unified": "^9.0.0",
+    "uuid": "^8.2.0"
+  }
+}
