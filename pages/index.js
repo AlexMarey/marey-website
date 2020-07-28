@@ -1,10 +1,17 @@
 import React from "react";
 import Link from "next/link";
+import {AboutMe, BlogPosts, Contact, Jumbotron, NavBar} from "../components";
 
 function IndexPage(props) {
   return (
-    <div>
-      <h1>Posts</h1>
+    <React.Fragment>
+
+      
+      <NavBar/>
+      <Jumbotron/>
+      <AboutMe/>
+      <div>
+      <h3>Check these posts out</h3>
       <ul>
         {props.blogs.map((blog, idx) => {
           return (
@@ -17,6 +24,8 @@ function IndexPage(props) {
         })}
       </ul>
     </div>
+    <Contact/>
+    </React.Fragment>
   );
 }
 
@@ -46,5 +55,6 @@ export async function getStaticProps() {
     props: { blogs },
   };
 }
+
 
 export default IndexPage;
