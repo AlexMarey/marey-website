@@ -5,26 +5,26 @@ import {AboutMe, BlogPosts, Contact, Jumbotron, NavBar} from "../components";
 function IndexPage(props) {
   return (
     <React.Fragment>
-
-      
       <NavBar/>
-      <Jumbotron/>
-      <AboutMe/>
-      <div>
-      <h3>Check these posts out</h3>
-      <ul>
-        {props.blogs.map((blog, idx) => {
-          return (
-            <li key={blog.id}>
-              <Link href={`/posts/${blog.slug}`}>
-                <a>{blog.title}</a>
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+      <div className="container">
+        <Jumbotron/>
+        <AboutMe/>
+        <div>
+        <h3>Check these posts out</h3>
+        <ul>
+          {props.blogs.map((blog, idx) => {
+            return (
+              <li key={blog.id}>
+                <Link href={`/posts/${blog.slug}`}>
+                  <a>{blog.title}</a>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+      <Contact/>
     </div>
-    <Contact/>
     </React.Fragment>
   );
 }
