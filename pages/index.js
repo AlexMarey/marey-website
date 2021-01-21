@@ -25,6 +25,15 @@ function IndexPage(props) {
       </div>
       <Contact/>
     </div>
+
+    <style jsx global>
+      {
+        `html,
+        body {
+          font-family: Roboto;
+        }`
+      }
+    </style>
     </React.Fragment>
   );
 }
