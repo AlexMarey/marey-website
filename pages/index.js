@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import {AboutMe, BlogPosts, Contact, Jumbotron, NavBar} from "../components";
 
 function IndexPage(props) {
@@ -9,31 +8,18 @@ function IndexPage(props) {
       <div className="container">
         <Jumbotron/>
         <AboutMe/>
-        <div>
-        <h3>Check these posts out</h3>
-        <ul>
-          {props.blogs.map((blog, idx) => {
-            return (
-              <li key={blog.id}>
-                <Link href={`/posts/${blog.slug}`}>
-                  <a>{blog.title}</a>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+        <BlogPosts blogs={props.blogs}/>
+        <Contact/>
       </div>
-      <Contact/>
-    </div>
 
-    <style jsx global>
-      {
-        `html,
-        body {
-          font-family: Roboto;
-        }`
-      }
-    </style>
+      <style jsx global>
+        {
+          `html,
+          body {
+            font-family: Roboto;
+          }`
+        }
+      </style>
     </React.Fragment>
   );
 }
