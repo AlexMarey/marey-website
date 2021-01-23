@@ -1,16 +1,18 @@
 import React from "react";
+import Container from '@material-ui/core/Container';
 import {AboutMe, BlogPosts, Contact, Jumbotron, NavBar} from "../components";
 
 function IndexPage(props) {
   return (
     <React.Fragment>
-      <NavBar/>
-      <div className="container">
+      <Container maxWidth="md">
+        <NavBar/>
+      
         <Jumbotron/>
         <AboutMe/>
         <BlogPosts blogs={props.blogs}/>
         <Contact/>
-      </div>
+      </Container>
 
       <style jsx global>
         {
