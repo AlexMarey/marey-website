@@ -1,13 +1,14 @@
 import React from "react";
+import {Layout} from "../../components";
 
 function BlogPostPage(props) {
   return (
-    <div>
+    <Layout>
       <h1>{props.blog.title}</h1>
       <section
         dangerouslySetInnerHTML={{ __html: props.blog.content }}
       ></section>
-    </div>
+    </Layout>
   );
 }
 

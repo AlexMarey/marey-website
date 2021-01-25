@@ -1,18 +1,13 @@
 import React from "react";
-import Container from '@material-ui/core/Container';
-import {AboutMe, BlogPosts, Contact, Jumbotron, NavBar} from "../components";
+import {AboutMe, BlogPosts, Contact, Jumbotron, NavBar, Layout} from "../components";
 
 function IndexPage(props) {
   return (
-    <React.Fragment>
-      <Container maxWidth="md">
-        <NavBar/>
-      
+    <Layout>
         <Jumbotron/>
         <AboutMe/>
         <BlogPosts blogs={props.blogs}/>
         <Contact/>
-      </Container>
 
       <style jsx global>
         {
@@ -22,7 +17,7 @@ function IndexPage(props) {
           }`
         }
       </style>
-    </React.Fragment>
+    </Layout>
   );
 }
 
