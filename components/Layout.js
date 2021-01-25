@@ -5,7 +5,7 @@ export default function Layout({children}) {
     return( 
         <Container maxWidth="md">
             <Navbar/>
-             {children}
+            {children}
         </Container>
     );
 }
