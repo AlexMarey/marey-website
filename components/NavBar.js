@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import NavButton from './NavButton.js';
@@ -11,26 +12,45 @@ const useStyles = makeStyles((theme) => ({
     },
     toolbarTitle: {
         flex: 2,
+        marginLeft: theme.spacing(2),
+        marginTop: theme.spacing(1),
+        marginBottom: theme.spacing(1),
     },
     toolbarButtons: {
         flex: 1,
     },
     navButton: {
         padding: theme.spacing(1),
+        margin: theme.spacing(1),
     }
 }));
 
-const navigationButtons = ["About Me", "Posts", "Contact Me"];
+const navigationButtons = [
+    {
+        title: "About Me",
+        url: "/"
+    }, 
+    {
+        title: "Posts",
+        url: "/posts"
+    }, 
+    {
+        title: "Contact Me",
+        url: "/contact"
+    }
+];
 
 export default function Navigation() {
     const classes = useStyles();
 
     return( 
         <Toolbar className={classes.toolbar}>
-            <Typography variant="h4" className={classes.toolbarTitle}>Marey</Typography>
+            <Link href={"/"}>
+                <Typography variant="h4" className={classes.toolbarTitle}>Marey</Typography>
+            </Link>
             <Box className={classes.toolbarButtons} justifyContent='center' display='flex'>
-                {navigationButtons.map((title) => {
-                    return <NavButton key={title} text={title} style={classes.navButton}/>
+                {navigationButtons.map((button) => {
+                    return <NavButton key={button.title} button={button} style={classes.navButton}/>
                 })}
             </Box> 
         </Toolbar>
