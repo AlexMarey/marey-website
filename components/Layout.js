@@ -3,9 +3,12 @@ import Container from '@material-ui/core/Container';
 
 export default function Layout({children}) {
     return( 
-        <Container maxWidth="md">
+        <React.Fragment>
             <Navbar/>
-            {children}
-        </Container>
+            <Container maxWidth="lg">
+                {children}
+            </Container>
+        </React.Fragment>
+        
     );
 }
