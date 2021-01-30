@@ -6,18 +6,21 @@ import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles((theme) => ({
     toolbar: {
-        justifyContent: 'space-between',
+        display: 'flex',
         overflowX: 'auto',
     },
     toolbarTitle: {
-        flex: 1,
-        alignContent: 'left',
+        flex: 2,
     },
     toolbarButtons: {
-        alignContent:'right',
-        justifyContent: 'space-between',
+        flex: 1,
+    },
+    navButton: {
+        padding: theme.spacing(1),
     }
 }));
+
+const navigationButtons = ["About Me", "Posts", "Contact Me"];
 
 export default function Navigation() {
     const classes = useStyles();
@@ -25,12 +28,12 @@ export default function Navigation() {
     return( 
         <Toolbar className={classes.toolbar}>
             <Typography variant="h4" className={classes.toolbarTitle}>Marey</Typography>
-            <Box className={classes.toolbarButtons}>
-                <NavButton text={"About Me"}/>
-                <NavButton text={"Posts"}/>
-                <NavButton text={"Contact Me"}/>
-            </Box>
-
+            <Box className={classes.toolbarButtons} justifyContent='center' display='flex'>
+                {navigationButtons.map((title) => {
+                    return <NavButton key={title} text={title} style={classes.navButton}/>
+                })}
+            </Box> 
         </Toolbar>
+        
     );
 }
