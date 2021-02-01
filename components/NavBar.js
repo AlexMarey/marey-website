@@ -9,12 +9,11 @@ const useStyles = makeStyles((theme) => ({
     toolbar: {
         display: 'flex',
         overflowX: 'auto',
+        borderBottom: `1px solid ${theme.palette.divider}`,
     },
     toolbarTitle: {
         flex: 2,
-        marginLeft: theme.spacing(2),
-        marginTop: theme.spacing(1),
-        marginBottom: theme.spacing(1),
+        marginLeft: theme.spacing(1),
     },
     toolbarButtons: {
         flex: 1,
@@ -46,7 +45,7 @@ export default function Navigation() {
     return( 
         <Toolbar className={classes.toolbar}>
             <Link href={"/"}>
-                <Typography variant="h4" className={classes.toolbarTitle}>Marey</Typography>
+                <Typography variant="h5" className={classes.toolbarTitle}>Marey</Typography>
             </Link>
             <Box className={classes.toolbarButtons} justifyContent='center' display='flex'>
                 {navigationButtons.map((button) => {
