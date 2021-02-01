@@ -1,4 +1,4 @@
-import AboutMe from "./AboutMe.js";
+import AboutMe from "./AboutMe/AboutMe.js";
 import BlogPosts from "./BlogPosts.js";
 import Contact from "./Contact.js";
 import Jumbotron  from "./Jumbotron/Jumbotron.js";
