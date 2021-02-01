@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function BlogPosts({blogs}) {
   return (
     <div>
-      <h3>Check these posts out</h3>
+      <h3>Jump into my brain</h3>
       <ul>
         {blogs.map((blog, idx) => {
           return (
