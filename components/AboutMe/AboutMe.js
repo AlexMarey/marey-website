@@ -1,8 +1,6 @@
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 
-import styles from './AboutMe.module.css'
-
 const factsAboutMe = [
   'Raised and born in St.Louis, finding a new home on the East coast',
   'Software developer by day with a sweet tooth for excellent user experience',
@@ -16,7 +14,7 @@ export default function AboutMe() {
   return (
     <Box m={2} pt={2} pb={2}>
       <Typography variant='h6' gutterBottom>This is my life</Typography>
-      <ul className={styles.asterisk}>
+      <ul className="asterisk">
           {factsAboutMe.map((fact) => {
             return <li><Typography variant="body">{fact}</Typography></li>
           })}
