@@ -25,7 +25,7 @@ function blogLink(blog) {
   return (
     <li key={blog.id}>
       <Link href={`/posts/${blog.slug}`}>
-        <a>{blog.title}</a>
+        <a><Typography variant="body">{blog.title}</Typography></a>
       </Link>
     </li>
   );
