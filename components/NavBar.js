@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import NavButton from './NavButton.js';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 
@@ -54,5 +53,13 @@ export default function Navigation() {
             </Box> 
         </Toolbar>
         
+    );
+}
+
+function NavButton({button, style}) {
+    return( 
+        <Link href={button.url}>
+            <Typography variant="button" className={style}>{button.title}</Typography>
+        </Link>
     );
 }
