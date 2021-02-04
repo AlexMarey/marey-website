@@ -24,8 +24,8 @@ function blogList(blogs) {
 function blogLink(blog) {
   return (
     <li key={blog.id}>
-      <Link href={`/posts/${blog.slug}`}>
-        <a><Typography variant="body1">{blog.title}</Typography></a>
+      <Link href={`/posts/${blog.slug}`} passHref>
+        <Typography variant="body1" component="a">{blog.title}</Typography>
       </Link>
     </li>
   );
