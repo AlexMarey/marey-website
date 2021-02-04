@@ -15,8 +15,8 @@ export default function AboutMe() {
     <Box m={2} pt={2} pb={2}>
       <Typography variant='h6' gutterBottom>This is my life</Typography>
       <ul className="asterisk">
-          {factsAboutMe.map((fact) => {
-            return <li><Typography variant="body">{fact}</Typography></li>
+          {factsAboutMe.map((fact, index) => {
+            return <li key={index}><Typography variant="body1">{fact}</Typography></li>
           })}
       </ul>
     </Box>
