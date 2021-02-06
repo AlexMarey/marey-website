@@ -1,21 +1,28 @@
 import React from "react";
-import {AboutMe, BlogPosts, Contact, Jumbotron, NavBar, Layout} from "../components";
+import {
+  AboutMe,
+  BlogPosts,
+  Contact,
+  Jumbotron,
+  NavBar,
+  Layout,
+} from "../components";
 
 function IndexPage(props) {
   return (
     <Layout>
-        <Jumbotron/>
-        <AboutMe/>
-        <BlogPosts blogs={props.blogs}/>
-        <Contact/>
+      <Jumbotron />
+      <AboutMe />
+      <BlogPosts blogs={props.blogs} />
+      <Contact />
 
       <style jsx global>
-        {
-          `html,
+        {`
+          html,
           body {
             font-family: Roboto;
-          }`
-        }
+          }
+        `}
       </style>
     </Layout>
   );
@@ -41,12 +48,11 @@ export async function getStaticProps() {
       return { ...data, id: uuid() };
     });
 
-    // By returning { props: blogs }, the IndexPage component
+  // By returning { props: blogs }, the IndexPage component
   // will receive `blogs` as a prop at build time
   return {
     props: { blogs },
   };
 }
-
 
 export default IndexPage;
