@@ -58,7 +58,7 @@ export default function Navigation() {
 
 function NavButton({button, style}) {
     return( 
-        <Link href={button.url}>
+        <Link href={button.url} passHref>
             <Typography variant="button" className={style}>{button.title}</Typography>
         </Link>
     );
