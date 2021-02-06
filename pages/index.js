@@ -1,31 +1,30 @@
 import React from "react";
-import Link from "next/link";
-import {AboutMe, BlogPosts, Contact, Jumbotron, NavBar} from "../components";
+import {
+  AboutMe,
+  BlogPosts,
+  Contact,
+  Jumbotron,
+  NavBar,
+  Layout,
+} from "../components";
 
 function IndexPage(props) {
   return (
-    <React.Fragment>
-      <NavBar/>
-      <div className="container">
-        <Jumbotron/>
-        <AboutMe/>
-        <div>
-        <h3>Check these posts out</h3>
-        <ul>
-          {props.blogs.map((blog, idx) => {
-            return (
-              <li key={blog.id}>
-                <Link href={`/posts/${blog.slug}`}>
-                  <a>{blog.title}</a>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-      <Contact/>
-    </div>
-    </React.Fragment>
+    <Layout>
+      <Jumbotron />
+      <AboutMe />
+      <BlogPosts blogs={props.blogs} />
+      <Contact />
+
+      <style jsx global>
+        {`
+          html,
+          body {
+            font-family: Roboto;
+          }
+        `}
+      </style>
+    </Layout>
   );
 }
 
@@ -49,12 +48,11 @@ export async function getStaticProps() {
       return { ...data, id: uuid() };
     });
 
-    // By returning { props: blogs }, the IndexPage component
+  // By returning { props: blogs }, the IndexPage component
   // will receive `blogs` as a prop at build time
   return {
     props: { blogs },
   };
 }
-
 
 export default IndexPage;
