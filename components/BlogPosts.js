@@ -4,8 +4,8 @@ import Typography from "@material-ui/core/Typography";
 
 export default function BlogPosts({ blogs }) {
   return (
-    <Box m={2} pt={2} pb={2}>
-      <Typography variant="h6">Jump into my brain</Typography>
+    <Box m={1} pt={1} pb={1}>
+      <Typography variant="h6">Jump Into My Brain</Typography>
       {blogList(blogs)}
     </Box>
   );

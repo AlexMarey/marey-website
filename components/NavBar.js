@@ -25,17 +25,9 @@ const useStyles = makeStyles((theme) => ({
 
 const navigationButtons = [
   {
-    title: "About Me",
-    url: "/",
-  },
-  {
     title: "Posts",
     url: "/posts",
-  },
-  {
-    title: "Contact Me",
-    url: "/contact",
-  },
+  }
 ];
 
 export default function Navigation() {
