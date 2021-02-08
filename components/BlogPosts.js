@@ -11,10 +11,24 @@ export default function BlogPosts({ blogs }) {
   );
 }
 
+function blogComparer(a, b) {
+  if( a.postId > b.postId ){
+    return 1;
+  } else if (a.postId < b.postId) {
+    return -1;
+  }
+  return 0;
+}
+
 function blogList(blogs) {
+  // Get the 5 most recent blogs
+  blogs.sort(blogComparer);
+  blogs.reverse().slice(4);
+
+  
   return (
     <ul className="asterisk">
-      {blogs.map((blog, idx) => {
+      {blogs.map((blog) => {
         return blogLink(blog);
       })}
     </ul>
@@ -26,7 +40,7 @@ function blogLink(blog) {
     <li key={blog.id}>
       <Link href={`/posts/${blog.slug}`} passHref>
         <Typography variant="body1" component="a">
-          {blog.title}
+          {blog.title} - {blog.date}
         </Typography>
       </Link>
     </li>
