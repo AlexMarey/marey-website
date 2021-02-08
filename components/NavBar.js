@@ -40,7 +40,7 @@ export default function Navigation() {
           Marey
         </Typography>
       </Link>
-      <Box
+      {/* <Box
         className={classes.toolbarButtons}
         justifyContent="center"
         display="flex"
@@ -54,7 +54,7 @@ export default function Navigation() {
             />
           );
         })}
-      </Box>
+      </Box> */}
     </Toolbar>
   );
 }
