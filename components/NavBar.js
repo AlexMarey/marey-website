@@ -25,17 +25,9 @@ const useStyles = makeStyles((theme) => ({
 
 const navigationButtons = [
   {
-    title: "About Me",
-    url: "/",
-  },
-  {
     title: "Posts",
     url: "/posts",
-  },
-  {
-    title: "Contact Me",
-    url: "/contact",
-  },
+  }
 ];
 
 export default function Navigation() {
@@ -48,7 +40,7 @@ export default function Navigation() {
           Marey
         </Typography>
       </Link>
-      <Box
+      {/* <Box
         className={classes.toolbarButtons}
         justifyContent="center"
         display="flex"
@@ -62,7 +54,7 @@ export default function Navigation() {
             />
           );
         })}
-      </Box>
+      </Box> */}
     </Toolbar>
   );
 }

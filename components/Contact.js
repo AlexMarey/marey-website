@@ -21,7 +21,7 @@ export default function Contact() {
       flexWrap="wrap"
       alignItems="center"
       justifyContent="center"
-      m={2}
+      m={1}
       pt={1}
       pb={1}
     >
