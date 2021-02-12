@@ -1,5 +1,6 @@
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
+import ComponentContainer from "../ComponentContainer";
 
 const factsAboutMe = [
   "Born and raised in St.Louis, finding a new home on the East coast",
@@ -12,19 +13,21 @@ const factsAboutMe = [
 
 export default function AboutMe() {
   return (
-    <Box m={1} pt={1} pb={1}>
-      <Typography variant="h6" gutterBottom>
-        A Little Bit About Me
-      </Typography>
-      <ul className="asterisk">
-        {factsAboutMe.map((fact, index) => {
-          return (
-            <li key={index}>
-              <Typography variant="body1">{fact}</Typography>
-            </li>
-          );
-        })}
-      </ul>
-    </Box>
+    <ComponentContainer>
+      <Box m={1} pt={1} pb={1}>
+        <Typography variant="h6" gutterBottom>
+          A Little Bit About Me
+        </Typography>
+        <ul className="asterisk">
+          {factsAboutMe.map((fact, index) => {
+            return (
+              <li key={index}>
+                <Typography variant="body1">{fact}</Typography>
+              </li>
+            );
+          })}
+        </ul>
+      </Box>
+    </ComponentContainer>
   );
 }
