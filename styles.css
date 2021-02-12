@@ -1,3 +1,7 @@
+body {
+  background-color: #fffee0;
+}
+
 .asterisk {
   list-style-type: "*  ";
 }
@@ -6,4 +10,14 @@
 .break {
   flex-basis: 100%;
   height: 0;
+}
+
+.backgroundBlue {
+  background-color: #233142;
+  width: 100vw;
+  overflow-x: auto;
+}
+
+.textWhite {
+  color: #e3e3e3;
 }
