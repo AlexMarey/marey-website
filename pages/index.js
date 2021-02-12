@@ -1,4 +1,5 @@
 import React from "react";
+import Box from "@material-ui/core/Box";
 import {
   AboutMe,
   BlogPosts,
@@ -11,11 +12,12 @@ import {
 function IndexPage(props) {
   return (
     <Layout>
-      <Jumbotron />
-      <AboutMe />
-      <BlogPosts blogs={props.blogs} />
-      <Contact />
-
+      <Box className="contentWrap">
+        <Jumbotron />
+        <AboutMe />
+        <BlogPosts blogs={props.blogs} />
+        <Contact />
+      </Box>
       <style jsx global>
         {`
           html,
