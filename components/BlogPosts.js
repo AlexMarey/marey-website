@@ -1,18 +1,21 @@
 import Link from "next/link";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
+import ComponentContainer from "./ComponentContainer";
 
 export default function BlogPosts({ blogs }) {
   return (
-    <Box m={1} pt={1} pb={1}>
-      <Typography variant="h6">Jump Into My Brain</Typography>
-      {blogList(blogs)}
-    </Box>
+    <ComponentContainer>
+      <Box m={1} pt={1} pb={1}>
+        <Typography variant="h6">Jump Into My Brain</Typography>
+        {blogList(blogs)}
+      </Box>
+    </ComponentContainer>
   );
 }
 
 function blogComparer(a, b) {
-  if( a.postId > b.postId ){
+  if (a.postId > b.postId) {
     return 1;
   } else if (a.postId < b.postId) {
     return -1;
@@ -25,7 +28,6 @@ function blogList(blogs) {
   blogs.sort(blogComparer);
   blogs.reverse().slice(4);
 
-  
   return (
     <ul className="asterisk">
       {blogs.map((blog) => {

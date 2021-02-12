@@ -1,13 +1,17 @@
 import Navbar from "./NavBar";
-import Container from "@material-ui/core/Container";
-import CssBaseline from '@material-ui/core/CssBaseline';
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Box from "@material-ui/core/Box";
+import { MuiThemeProvider } from "@material-ui/core/styles";
+import alexTheme from "../src/theme";
 
 export default function Layout({ children }) {
   return (
-    <React.Fragment>
+    <MuiThemeProvider theme={alexTheme}>
       <CssBaseline />
-      <Navbar />
-      <Container maxWidth="lg">{children}</Container>
-    </React.Fragment>
+      <Box className="pageContainer">
+        <Navbar />
+        {children}
+      </Box>
+    </MuiThemeProvider>
   );
 }

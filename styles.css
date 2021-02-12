@@ -2,8 +2,33 @@
   list-style-type: "*  ";
 }
 
-/* Helper Classes */
 .break {
   flex-basis: 100%;
   height: 0;
+}
+
+.backgroundBlue {
+  background-color: #233142;
+  width: 100vw;
+  overflow-x: auto;
+}
+
+.textWhite {
+  color: #e3e3e3;
+}
+
+.pageContainer {
+  position: relative;
+  min-height: 100vh;
+}
+
+.contentWrap {
+  padding-bottom: 7rem;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 7rem;
 }
