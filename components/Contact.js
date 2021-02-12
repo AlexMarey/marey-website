@@ -21,19 +21,18 @@ export default function Contact() {
       flexWrap="wrap"
       alignItems="center"
       justifyContent="center"
-      m={1}
-      pt={1}
-      pb={1}
+      color="#e3e3e3"
+      bgcolor="#233142"
     >
       <Typography variant="h6" gutterBottom>
-        Want to chat? Email me or reach out on Twitter
+        Want to chat? Reach out to me on Twitter
       </Typography>
       <Box className="break" />
-      <Link href="mailto:alx.9.mar@gmail.com">
+      {/* <Link href="mailto:alx.9.mar@gmail.com">
         <a>
           <EmailIcon className={classes.icon} />
         </a>
-      </Link>
+      </Link> */}
       <Link href={"https://twitter.com/AlexTakesOnCHS"}>
         <a>
           <TwitterIcon className={classes.icon} />
