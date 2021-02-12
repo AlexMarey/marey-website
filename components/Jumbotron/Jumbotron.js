@@ -4,7 +4,7 @@ import Typography from "@material-ui/core/Typography";
 
 export default function Jumbotron() {
   return (
-    <Box className="backgroundBlue textWhite">
+    <Box color="#e3e3e3" bgcolor="#233142">
       <Box display="flex">
         <Box className={styles.imgWrapper} m="auto" pt={2}>
           <img className={styles.imgCropper} src="/alex-square-edit.jpg" />
