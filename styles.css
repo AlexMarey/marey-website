@@ -32,3 +32,15 @@
   width: 100%;
   height: 7rem;
 }
+
+a {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none;
+}
+
+.linkUnderline {
+  background-image: linear-gradient(0, #D72323, #D72323);
+  background-repeat: no-repeat;
+  background-size: 120% 0.15em;
+  background-position: 0 98%;
+}
