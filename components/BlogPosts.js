@@ -41,7 +41,7 @@ function blogLink(blog) {
   return (
     <li key={blog.id}>
       <Link href={`/posts/${blog.slug}`} passHref>
-        <Typography variant="body1" component="a">
+        <Typography variant="body1" component="a" className="linkUnderline">
           {blog.title} - {blog.date}
         </Typography>
       </Link>
