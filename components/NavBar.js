@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
   toolbar: {
     display: "flex",
     overflowX: "auto",
+    minHeight: theme.spacing(6),
   },
   toolbarTitle: {
     marginLeft: theme.spacing(1),
