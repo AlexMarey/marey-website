@@ -1,6 +1,6 @@
 import React from "react";
-import {Layout} from "../../components";
-import {ComponentContainer} from "../../components";
+import { Layout } from "../../components";
+import { ComponentContainer } from "../../components";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import Container from "@material-ui/core/Container";
@@ -10,8 +10,7 @@ function BlogPostPage(props) {
     <Layout>
       <Container maxWidth="md">
         <Box m={1} p={1}>
-          <Typography variant="h6">{props.blog.title}</Typography>
-          <Typography variant="subtitle1">By: {props.blog.author}</Typography>
+          <Typography variant="h4">{props.blog.title}</Typography>
           <Typography variant="subtitle2">Posted: {props.blog.date}</Typography>
           <section
             dangerouslySetInnerHTML={{ __html: props.blog.content }}
