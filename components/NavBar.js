@@ -8,20 +8,32 @@ const useStyles = makeStyles((theme) => ({
   toolbar: {
     display: "flex",
     overflowX: "auto",
-    borderBottom: `1px solid ${theme.palette.divider}`,
   },
   toolbarTitle: {
-    flex: 2,
     marginLeft: theme.spacing(1),
-  },
-  toolbarButtons: {
-    flex: 1,
   },
   navButton: {
     padding: theme.spacing(1),
     margin: theme.spacing(1),
   },
 }));
+
+export default function Navigation() {
+  const classes = useStyles();
+
+  return (
+    <Toolbar className={classes.toolbar}>
+      <Link href={"/"}>
+        <Typography
+          variant="h5"
+          className={classes.toolbarTitle + " linkUnderline"}
+        >
+          Marey
+        </Typography>
+      </Link>
+    </Toolbar>
+  );
+}
 
 const navigationButtons = [
   {
@@ -30,32 +42,23 @@ const navigationButtons = [
   },
 ];
 
-export default function Navigation() {
-  const classes = useStyles();
-
+function ButtonRow() {
   return (
-    <Toolbar className={classes.toolbar}>
-      <Link href={"/"}>
-        <Typography variant="h5" className={classes.toolbarTitle}>
-          Marey
-        </Typography>
-      </Link>
-      {/* <Box
-        className={classes.toolbarButtons}
-        justifyContent="center"
-        display="flex"
-      >
-        {navigationButtons.map((button) => {
-          return (
-            <NavButton
-              key={button.title}
-              button={button}
-              style={classes.navButton}
-            />
-          );
-        })}
-      </Box> */}
-    </Toolbar>
+    <Box
+      className={classes.toolbarButtons}
+      justifyContent="center"
+      display="flex"
+    >
+      {navigationButtons.map((button) => {
+        return (
+          <NavButton
+            key={button.title}
+            button={button}
+            style={classes.navButton}
+          />
+        );
+      })}
+    </Box>
   );
 }
 
