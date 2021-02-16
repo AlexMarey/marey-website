@@ -27,7 +27,7 @@ const navigationButtons = [
   {
     title: "Posts",
     url: "/posts",
-  }
+  },
 ];
 
 export default function Navigation() {
