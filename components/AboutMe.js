@@ -1,6 +1,6 @@
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
-import ComponentContainer from "../ComponentContainer";
+import ComponentContainer from "./ComponentContainer";
 
 const factsAboutMe = [
   "Born and raised in St.Louis, finding a new home on the East coast",
