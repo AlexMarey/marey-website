@@ -7,15 +7,13 @@ const alexTheme = createMuiTheme({
     background: {
       default: "#e3e3e3",
     },
-    primary: {
-      main: "#556cd6",
-    },
-    secondary: {
-      main: "#19857b",
-    },
-    error: {
-      main: red.A400,
-    },
+  },
+  typography: {
+    fontFamily: `"HelveticaNeue", "Helvetica", "Arial", sans-serif`,
+    fontSize: 14,
+    fontWeightLight: 300,
+    fontWeightRegular: 400,
+    fontWeightMedium: 500,
   },
 });
 

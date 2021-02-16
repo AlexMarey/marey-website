@@ -8,7 +8,7 @@ export default function BlogPosts({ blogs }) {
     <ComponentContainer>
       <Box m={1} pt={1} pb={1}>
         <Typography variant="h6">Jump Into My Brain</Typography>
-        {blogList(blogs)}
+        {mostRecentBlogPosts(blogs)}
       </Box>
     </ComponentContainer>
   );
@@ -23,7 +23,7 @@ function blogComparer(a, b) {
   return 0;
 }
 
-function blogList(blogs) {
+function mostRecentBlogPosts(blogs) {
   // Get the 5 most recent blogs
   blogs.sort(blogComparer);
   blogs.reverse().slice(4);
@@ -41,8 +41,10 @@ function blogLink(blog) {
   return (
     <li key={blog.id}>
       <Link href={`/posts/${blog.slug}`} passHref>
-        <Typography variant="body1" component="a" className="linkUnderline">
-          {blog.title} - {blog.date}
+        <Typography variant="body1" component="a">
+          <span className="linkUnderline">{blog.title}</span>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          {blog.date}
         </Typography>
       </Link>
     </li>
