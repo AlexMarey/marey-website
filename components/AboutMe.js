@@ -3,10 +3,10 @@ import Typography from "@material-ui/core/Typography";
 import ComponentContainer from "./ComponentContainer";
 
 const factsAboutMe = [
-  "Born and raised in St.Louis, finding a new home on the East coast",
   "Software developer with a sweet tooth for excellent user experience",
-  "Doesn't matter if I'm playing video games or board games as long as I'm in good company",
-  "In my spare time I like to be creative by taking photos or drawing",
+  "Born and raised in St.Louis, finding a new home on the East coast",
+  "It doesn't matter if I'm playing video games or board games as long as I'm in good company",
+  "I like to scratch my creative itch by taking photos, drawing, or painting",
   "The beach is better than mountains",
   "Running, volleyball, yoga, skateboarding, or bouldering. You name it, I want to try it.",
 ];

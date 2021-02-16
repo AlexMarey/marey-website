@@ -14,10 +14,16 @@ export default function Jumbotron() {
         display="flex"
         alignItems="center"
         justifyContent="center"
-        fontWeight="fontWeightBold"
+        color="#e3e3e3"
+        bgcolor="#233142"
       >
-        <Typography variant="h4" gutterBottom>
-          Welcome! Enjoy your stay.
+        <Typography
+          variant="h4"
+          align="center"
+          fontWeight="fontWeightBold"
+          gutterBottom
+        >
+          Welcome! Enjoy your stay
         </Typography>
       </Box>
     </Box>
