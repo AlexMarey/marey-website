@@ -1,4 +1,5 @@
 import React from "react";
+import Head from 'next/head'
 import Box from "@material-ui/core/Box";
 import {
   AboutMe,
@@ -11,6 +12,10 @@ import {
 
 function IndexPage(props) {
   return (
+    <>
+    <Head>
+      <title>Marey</title>
+    </Head>
     <Layout>
       <Box className="contentWrap">
         <Jumbotron />
@@ -27,6 +32,7 @@ function IndexPage(props) {
         `}
       </style>
     </Layout>
+    </>
   );
 }
 
