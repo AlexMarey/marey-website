@@ -1,7 +1,7 @@
 ---
-title: What I Learned in Boating School Is.....
-slug: hello-world
-date: June 14, 2020
+title: 12 Months of Projects
+slug: 12-months-of-projects
+date: Feb. 19, 2021
 postId: "1"
 ---
 
